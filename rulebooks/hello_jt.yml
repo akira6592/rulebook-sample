@@ -15,4 +15,4 @@
         #   name: test_playbook.yml
         run_job_template:
           name: debug
-          organization: Defaulted 
+          organization: Default
