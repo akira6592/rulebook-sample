@@ -14,5 +14,5 @@
         # run_playbook:
         #   name: test_playbook.yml
         run_job_template:
-          name: inventories
-          organization: Default
+          name: debug
+          organization: Defaulted 
