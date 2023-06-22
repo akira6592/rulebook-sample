@@ -1,6 +1,6 @@
 ---
 - name: Hello Events
-  hosts: all
+  # hosts: all
 
   sources:
     - ansible.eda.webhook:
