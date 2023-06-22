@@ -11,5 +11,5 @@
     - name: Say Hello
       condition: event.payload.message == "sakana"
       action:
-        run_playbook:
-          name: test_playbook.yml
+        debug:
+          msg: sakana!
