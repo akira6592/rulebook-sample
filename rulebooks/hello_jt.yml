@@ -11,8 +11,6 @@
     - name: Say Hello
       condition: event.payload.message == "sakana"
       action:
-        # run_playbook:
-        #   name: test_playbook.yml
         run_job_template:
           name: Demo Job Template
           organization: Default
