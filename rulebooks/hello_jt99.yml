@@ -1,0 +1,20 @@
+---
+- name: Hello Events
+  hosts: all
+
+  sources:
+    - ansible.eda.webhook:
+        host: 0.0.0.0
+        port: 5000
+
+  rules:
+    - name: An automatic remediation rule
+      condition: event.outage == true
+      action:
+        run_playbook:
+          name: remediate_outage.yml
+
+    - name: Print event with linux
+      condition: event.target_os == "linux" or
+      action:
+        debug:
