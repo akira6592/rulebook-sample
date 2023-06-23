@@ -1,0 +1,16 @@
+---
+- name: Hello Events
+  hosts: all
+
+  sources:
+    - ansible.eda.webhook:
+        host: 0.0.0.0
+        port: 5000
+
+  rules:
+    - name: Say Hello
+      condition: event.payload.message == "sakana"
+      action:
+        run_job_template:
+          name: debug_eda
+          organization: Default
