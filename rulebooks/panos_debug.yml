@@ -1,0 +1,15 @@
+---
+- name: Hello Events
+  hosts: all
+
+  sources:
+    - paloaltonetworks.panos.logs:
+        host: 0.0.0.0
+        port: 5000
+
+  rules:
+    - name: Say Hello
+      condition: event.i == 1
+      action:
+        debug:
+          msg: sakana!
