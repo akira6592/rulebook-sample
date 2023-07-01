@@ -6,6 +6,7 @@
     - paloaltonetworks.panos.logs:
         host: 0.0.0.0
         port: 5000
+        type: decryption
 
   rules:
     - name: Say Hello
