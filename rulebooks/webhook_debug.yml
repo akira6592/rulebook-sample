@@ -12,7 +12,7 @@
       condition: 1 == 1
       action:
         debug:
-          msg: e
+          msg: "{{ event }}"
 
     # - name: print output
     #   condition: event is defined
