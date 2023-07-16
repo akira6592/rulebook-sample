@@ -14,9 +14,9 @@
         debug:
           msg: e
 
-    - name: print output
-      condition: event is defined
-      action:
-        print_event:
-          pretty: true
-          var_root: evnet
+    # - name: print output
+    #   condition: event is defined
+    #   action:
+    #     print_event:
+    #       pretty: true
+    #       var_root: evnet
