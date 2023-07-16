@@ -12,4 +12,4 @@
       condition: 1 == 1
       action:
         debug:
-          msg: "{{ evnet }}"
+          msg:
