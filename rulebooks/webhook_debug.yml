@@ -13,3 +13,8 @@
       action:
         debug:
           msg:
+
+    - name: print output
+      condition: event is defined
+      action:
+        print_event:
