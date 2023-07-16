@@ -6,11 +6,10 @@
     - paloaltonetworks.panos.logs:
         host: 0.0.0.0
         port: 5000
-        type: decryption
 
   rules:
-    - name: Say Hello
-      condition: event.i == 1
+    - name: Debug event
+      condition: event is defined
       action:
         debug:
-          msg: sakana!
+          msg: "{{ event }}"

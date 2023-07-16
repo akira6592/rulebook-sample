@@ -9,7 +9,7 @@
 
   rules:
     - name: Say Hello
-      condition: 1 == 1
+      condition: event is defined
       action:
         debug:
           msg: "{{ event }}"
