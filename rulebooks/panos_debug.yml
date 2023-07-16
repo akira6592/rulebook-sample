@@ -1,15 +1,16 @@
 ---
-- name: Hello Events
+- name: panos test
   hosts: all
 
   sources:
-    - paloaltonetworks.panos.logs:
+    - name: Listen logs via HTTP server Profile
+      paloaltonetworks.panos.logs:
         host: 0.0.0.0
         port: 5000
 
   rules:
     - name: Debug event
-      condition: event is defined
+      condition: 1 == 1
       action:
         debug:
           msg: "{{ event }}"
