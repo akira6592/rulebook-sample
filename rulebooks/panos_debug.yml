@@ -15,4 +15,3 @@
         - debug: 
             msg: "{{ event }}"
         - print_event:
-            pretty: true
