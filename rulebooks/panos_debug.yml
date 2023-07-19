@@ -11,6 +11,6 @@
   rules:
     - name: Debug event
       condition: event.payload is defined
-      actions:
-        - debug: 
-            msg: "{{ event }}"
+      action:
+        debug: 
+          msg: "{{ event }}"
