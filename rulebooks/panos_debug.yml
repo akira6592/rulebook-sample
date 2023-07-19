@@ -10,7 +10,7 @@
 
   rules:
     - name: Say Hello
-      condition: event.payload.message == "sakana"
+      condition: event is defined
       action:
         debug: 
           msg: "{{ event }}"
