@@ -14,4 +14,3 @@
       actions:
         - debug: 
             msg: "{{ event }}"
-        - print_event:
