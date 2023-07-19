@@ -9,8 +9,14 @@
         port: 5000
 
   rules:
-    - name: Debug event
-      condition: event.payload is defined
+    # - name: Debug event
+    #   condition: event.payload is defined
+    #   action:
+    #     debug: 
+    #       msg: "{{ event }}"
+    - name: Say Hello
+      condition: event.payload.message == "sakana"
       action:
-        debug: 
-          msg: "{{ event }}"
+        run_job_template:
+          name: Demo Job Template
+          organization: Default
