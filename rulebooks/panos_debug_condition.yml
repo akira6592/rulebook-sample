@@ -14,4 +14,4 @@
       # condition: event.payload.opaque == "ab"
       action:
         debug: 
-          msg: "{{ event.payload.msg }}"
+          msg: "{{ event.payload }}"
