@@ -13,5 +13,6 @@
       condition: event.payload.opaque is match("Commit job succeeded")
       # condition: event.payload.opaque == "ab"
       action:
-        debug: 
-          msg: "{{ event.payload }}"
+        run_job_template:
+          name: Demo Job Template    # 実行したいジョブテンプレート名
+          organization: Default
