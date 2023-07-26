@@ -10,9 +10,7 @@
 
   rules:
     - name: Say Hello
-      condition: event.payload == "Commit job succeeded"
-      # condition: event.payload is defined
-
+      condition: event.payload.opaqueaaa is defined
       action:
         debug: 
-          msg: "{{ event.payload.opaque }}"
+          msg: "{{ event.payload }}"
