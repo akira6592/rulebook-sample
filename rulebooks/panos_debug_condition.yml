@@ -10,8 +10,8 @@
 
   rules:
     - name: Say Hello
-      # condition: event.payload.opaque is defined
-      condition: event.payload.opaque == "ab"
+      condition: event.payload.opaque is defined
+      # condition: event.payload.opaque == "ab"
       action:
         debug: 
-          msg: "{{ event.payload }}"
+          msg: "{{ event.payload.msg }}"
