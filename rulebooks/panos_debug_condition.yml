@@ -10,7 +10,8 @@
 
   rules:
     - name: Say Hello
-      condition: event.payload.opaque contains "Commit job succeeded"
+      condition: event.payload.opaque == "Commit job succeeded"
+
       action:
         debug: 
           msg: "{{ event }}"
