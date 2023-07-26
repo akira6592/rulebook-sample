@@ -15,4 +15,4 @@
 
       action:
         debug: 
-          msg: "{{ event.payload }}"
+          msg: "{{ event.payload.payload }}"
