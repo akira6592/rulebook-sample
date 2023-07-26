@@ -1,0 +1,16 @@
+---
+- name: panos test
+  hosts: all
+
+  sources:
+    - name: Listen logs via HTTP server Profile
+      paloaltonetworks.panos.logs:
+        host: 0.0.0.0
+        port: 5000
+
+  rules:
+    - name: Say Hello
+      condition: event.payload is defined
+      action:
+        debug: 
+          msg: "{{ event }}"
