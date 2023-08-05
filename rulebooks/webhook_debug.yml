@@ -12,7 +12,8 @@
       condition: event.payload is defined
       action:
         debug:
-          msg: "{{ event }}"
+          msg: 111
+          # msg: "{{ event }}"
 
     # - name: print output
     #   condition: event is defined
