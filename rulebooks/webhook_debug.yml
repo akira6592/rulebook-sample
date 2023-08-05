@@ -9,7 +9,7 @@
 
   rules:
     - name: Say Hello
-      condition: event is defined
+      condition: event.payload is defined
       action:
         debug:
           msg: "{{ event }}"
