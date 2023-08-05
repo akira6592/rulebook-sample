@@ -11,4 +11,4 @@
       condition: event.i == 1
       action:
         debug:
-          msg: sakana!
+          msg: ugui!
