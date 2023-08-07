@@ -12,7 +12,7 @@
       condition: event.payload is defined
       action:
         debug:
-          msg: 555
+          msg: 666
           # msg: "{{ event }}"
 
     # - name: print output
