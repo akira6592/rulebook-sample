@@ -1,0 +1,16 @@
+---
+- name: Hello Events
+  hosts: all
+
+  sources:
+    - ansible.eda.webhook:
+        host: 0.0.0.0
+        port: 5000
+        token: 72232ecb-8b5f-15ed-5d28-597840a98608
+
+  rules:
+    - name: Say Hello
+      condition: event.payload is defined
+      action:
+        debug:
+          msg: "{{ event }}"
